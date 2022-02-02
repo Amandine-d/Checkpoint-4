@@ -1,3 +1,3 @@
-const projectRouter = require("express").Router();
+const userRouter = require("express").Router();
 
-module.exports = projectRouter;
+module.exports = userRouter;
