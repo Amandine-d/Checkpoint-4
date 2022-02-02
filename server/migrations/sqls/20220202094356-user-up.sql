@@ -3,7 +3,7 @@ CREATE TABLE user (
     `firstname` VARCHAR(255) NOT NULL,
     `lastname` VARCHAR(255),
     `email` VARCHAR(255),
-    `password` VARCHAR(255) NOT NULL,
-    `role` INT NOT NULL,
+    `hashedpassword` VARCHAR(255) NOT NULL,
+    `is_admin` INT NOT NULL,
     `experience` TEXT
 );

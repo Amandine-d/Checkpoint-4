@@ -1,1 +1,1 @@
-TRUNCATE TABLE 'events';
+TRUNCATE TABLE 'user';
