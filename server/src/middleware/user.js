@@ -3,26 +3,26 @@ const { User } = require("../models");
 const validateCreateUser = (req, res, next) => {
   const { firstname, lastname, password, role, email, experience } = req.body;
   if (firstname && lastname && password && role && email && experience) {
-    const userInformation = {};
+    const userData = {};
     if (firstname) {
-      userInformation.firstname = firstname;
+      userData.firstname = firstname;
     }
     if (lastname) {
-      userInformation.lastname = lastname;
+      userData.lastname = lastname;
     }
     if (password) {
-      userInformation.password = password;
+      userData.password = password;
     }
     if (role) {
-      userInformation.role = role;
+      userData.role = role;
     }
     if (email) {
-      userInformation.email = email;
+      userData.email = email;
     }
     if (experience) {
-      userInformation.experience = experience;
+      userData.experience = experience;
     }
-    req.userInformation = userInformation;
+    req.userData = userData;
     return next();
   }
   return res.status(422).json({ message: "You forgot something" });
@@ -34,26 +34,26 @@ const validatePutUser = async (req, res, next) => {
   try {
     const [result] = await User.findOneById(id);
     if (!result.length) return res.status(404).send();
-    const userInformation = {};
+    const userData = {};
     if (firstname) {
-      userInformation.firstname = firstname;
+      userData.firstname = firstname;
     }
     if (lastname) {
-      userInformation.lastname = lastname;
+      userData.lastname = lastname;
     }
     if (password) {
-      userInformation.password = password;
+      userData.password = password;
     }
     if (role) {
-      userInformation.role = role;
+      userData.role = role;
     }
     if (email) {
-      userInformation.email = email;
+      userData.email = email;
     }
     if (experience) {
-      userInformation.experience = experience;
+      userData.experience = experience;
     }
-    req.userInformation = userInformation;
+    req.userData = userData;
     return next();
   } catch (err) {
     return res.status(500).send(err.message);

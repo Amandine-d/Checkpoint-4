@@ -17,7 +17,7 @@ const createOne = async (req, res) => {
   if (!email || !password) {
     return res.status(400).json({ error: "Incorrect email or password" });
   } try {
-    const [result] = await User.createOne(req.userInformation);
+    const [result] = await User.createOne(req.userData);
     const saltRounds = 10;
     bcrypt.hash(password, saltRounds, function (err, hashedPassword) {
       const user = new User({ password: hashedPassword });
@@ -82,7 +82,7 @@ const verifyToken = async (req, res, next) => {
 const updateOne = async (req, res, next) => {
   const { id } = req.params;
   try {
-    await User.updateOne(req.userInformation, id);
+    await User.updateOne(req.userData, id);
     return next();
   } catch (err) {
     return res.status(500).send(err.message);

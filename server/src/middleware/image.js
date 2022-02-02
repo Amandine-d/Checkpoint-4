@@ -1,71 +1,71 @@
 const { Image } = require("../models");
 
 const validateCreateImage = (req, res, next) => {
-  const { srcBefore, altBefore, srcAfter, altAfter, description, author, location, project_id } = req.body;
-  if (srcBefore && altBefore && srcAfter && altAfter && description && author && location && project_id) {
-    const imageInformation = {};
+  const { srcBefore, altBefore, /* srcAfter, altAfter, */ description, author, location, project_id } = req.body;
+  if (srcBefore && altBefore && /* srcAfter && altAfter && */ description && author && location && project_id) {
+    const imageData = {};
     if (srcBefore) {
-      imageInformation.srcBefore = srcBefore;
+      imageData.srcBefore = srcBefore;
     }
     if (altBefore) {
-      imageInformation.altBefore = altBefore;
+      imageData.altBefore = altBefore;
     }
-    if (srcAfter) {
-      imageInformation.srcAfter = srcAfter;
-    }
-    if (altAfter) {
-      imageInformation.altAfter = altAfter;
-    }
+    // if (srcAfter) {
+    //   imageData.srcAfter = srcAfter;
+    // }
+    // if (altAfter) {
+    //   imageData.altAfter = altAfter;
+    // }
     if (description) {
-      imageInformation.description = description;
+      imageData.description = description;
     }
     if (author) {
-      imageInformation.author = author;
+      imageData.author = author;
     }
     if (location) {
-      imageInformation.location = location;
+      imageData.location = location;
     }
     if (project_id) {
-      imageInformation.project_id = project_id;
+      imageData.project_id = project_id;
     }
-    req.imageInformation = imageInformation;
+    req.imageData = imageData;
     return next();
   }
   return res.status(422).json({ message: "You forgot something" });
 };
 
 const validatePutImage = async (req, res, next) => {
-  const { srcBefore, altBefore, srcAfter, altAfter, description, author, location, project_id } = req.body;
+  const { srcBefore, altBefore, /* srcAfter, altAfter, */ description, author, location, project_id } = req.body;
   const { id } = req.params;
   try {
     const [result] = await Image.findOneById(id);
     if (!result.length) return res.status(404).send();
-    const imageInformation = {};
+    const imageData = {};
     if (srcBefore) {
-      imageInformation.srcBefore = srcBefore;
+      imageData.srcBefore = srcBefore;
     }
     if (altBefore) {
-      imageInformation.altBefore = altBefore;
+      imageData.altBefore = altBefore;
     }
-    if (srcAfter) {
-      imageInformation.srcAfter = srcAfter;
-    }
-    if (altAfter) {
-      imageInformation.altAfter = altAfter;
-    }
+    // if (srcAfter) {
+    //   imageData.srcAfter = srcAfter;
+    // }
+    // if (altAfter) {
+    //   imageData.altAfter = altAfter;
+    // }
     if (description) {
-      imageInformation.description = description;
+      imageData.description = description;
     }
     if (author) {
-      imageInformation.author = author;
+      imageData.author = author;
     }
     if (location) {
-      imageInformation.location = location;
+      imageData.location = location;
     }
     if (project_id) {
-      imageInformation.project_id = project_id;
+      imageData.project_id = project_id;
     }
-    req.imageInformation = imageInformation;
+    req.imageData = imageData;
     return next();
   } catch (err) {
     return res.status(500).send(err.message);

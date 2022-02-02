@@ -24,7 +24,7 @@ const findOneById = async (req, res) => {
 
 const createOne = async (req, res, next) => {
   try {
-    const [result] = await Project.createOne(req.projectInformation);
+    const [result] = await Project.createOne(req.projectData);
     req.id = result.insertId;
     return next();
   } catch (err) {
@@ -35,7 +35,7 @@ const createOne = async (req, res, next) => {
 const updateOne = async (req, res, next) => {
   const { id } = req.params;
   try {
-    await Project.updateOne(req.projectInformation, id);
+    await Project.updateOne(req.projectData, id);
     return next();
   } catch (err) {
     return res.status(500).send(err.message);
