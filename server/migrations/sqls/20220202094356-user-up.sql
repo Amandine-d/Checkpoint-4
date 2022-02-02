@@ -5,5 +5,5 @@ CREATE TABLE user (
     `email` VARCHAR(255),
     `password` VARCHAR(255) NOT NULL
     `role` VARCHAR(120) NOT NULL,
-    `experience` TEXT NOT NULL
+    `experience` TEXT
 );
