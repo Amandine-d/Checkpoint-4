@@ -26,7 +26,7 @@ const validateCreateProject = (req, res, next) => {
 };
 
 const validatePutProject = async (req, res, next) => {
-  const { title, description, start_date, end_date, tags, active } = req.body;
+  const { title, description, start_date, end_date, tags } = req.body;
   const { id } = req.params;
   try {
     const [result] = await Project.findOneById(id);
@@ -44,16 +44,13 @@ const validatePutProject = async (req, res, next) => {
     if (end_date) {
       projectInformation.end_date = end_date;
     }
-    if (active) {
-      projectInformation.active = active;
-    }
     if (tags) {
       projectInformation.tags = tags;
     }
     req.projectInformation = projectInformation;
     return next();
-  } catch (e) {
-    return res.status(500).send(e.message);
+  } catch (err) {
+    return res.status(500).send(err.message);
   }
 };
 

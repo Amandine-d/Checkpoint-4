@@ -1,7 +1,9 @@
 CREATE TABLE images (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `src` VARCHAR(255) NOT NULL,
-    `alt` VARCHAR(100) NOT NULL,
+    `srcBefore` VARCHAR(255) NOT NULL,
+    `altBefore` VARCHAR(100) NOT NULL,
+    `srcAfter` VARCHAR(255),
+    `altAfter` VARCHAR(100),
     `description` TEXT,
     `location` VARCHAR(255),
     `author` VARCHAR(255),

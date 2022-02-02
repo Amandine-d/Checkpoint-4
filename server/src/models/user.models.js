@@ -11,6 +11,12 @@ class User {
     return connection.promise().query(sql, [id]);
   }
 
+  static async findOneByEmail(email) {
+    const sql = "SELECT * FROM user WHERE email=?";
+    const [result] = await connection.promise().query(sql, [email]);
+    return result.length > 0;
+  }
+
   static createOne(project) {
     const sql = "INSERT INTO user SET ?";
     return connection.promise().query(sql, [project]);
