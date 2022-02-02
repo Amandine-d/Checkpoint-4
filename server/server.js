@@ -2,10 +2,11 @@ require("dotenv").config();
 const express = require("express");
 
 const app = express();
+const mainRouter = require("./src/routes");
 const { connection } = require("./db-connection");
 
 app.use(express.json());
-// app.use("/api", mainRouter);
+app.use("/api", mainRouter);
 
 const server = app.listen(process.env.PORT || 8000, (err) => {
   // eslint-disable-next-line no-console
