@@ -17,14 +17,14 @@ class User {
     return result.length > 0;
   }
 
-  static createOne(project) {
+  static createOne(user) {
     const sql = "INSERT INTO user SET ?";
-    return connection.promise().query(sql, [project]);
+    return connection.promise().query(sql, [user]);
   }
 
-  static updateOne(project, id) {
+  static updateOne(user, id) {
     const sql = "UPDATE user SET ? WHERE id=?";
-    return connection.promise().query(sql, [project, id]);
+    return connection.promise().query(sql, [user, id]);
   }
 
   static deleteOne(id) {

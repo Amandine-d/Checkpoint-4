@@ -11,14 +11,14 @@ class Image {
     return connection.promise().query(sql, [id]);
   }
 
-  static createOne(project) {
+  static createOne(image) {
     const sql = "INSERT INTO image SET ?";
-    return connection.promise().query(sql, [project]);
+    return connection.promise().query(sql, [image]);
   }
 
-  static updateOne(project, id) {
+  static updateOne(image, id) {
     const sql = "UPDATE image SET ? WHERE id=?";
-    return connection.promise().query(sql, [project, id]);
+    return connection.promise().query(sql, [image, id]);
   }
 
   static deleteOne(id) {
