@@ -1,9 +1,22 @@
-const { Project } = require("../models");
+const { Project, Image } = require("../models");
 
 const findAll = async (req, res) => {
   try {
-    const [results] = await Project.findAll();
-    return res.status(200).send(results);
+    const [projects] = await Project.findAll();
+    projects.forEach((project) => {
+      project.images = [];
+      return projects;
+    });
+    const [images] = await Image.findAll();
+    images.forEach((image) => {
+      projects.map((project) => {
+        if (image.project_id === project.id) {
+          project.images.push(image);
+        }
+        return projects;
+      })
+    })
+    return res.status(200).send(projects);
   } catch (err) {
     return res.status(500).send(err.message);
   }

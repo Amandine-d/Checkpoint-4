@@ -1,14 +1,14 @@
 const { Project } = require("../models");
 
 const validateCreateProject = (req, res, next) => {
-  const { title, description, start_date, end_date, tags } = req.body;
-  if (title && description && start_date && end_date && tags) {
+  const { title, description_project, start_date, end_date, tags } = req.body;
+  if (title && description_project && start_date && end_date && tags) {
     const projectData = {};
     if (title) {
       projectData.title = title;
     }
-    if (description) {
-      projectData.description = description;
+    if (description_project_project) {
+      projectData.description_project = description_project;
     }
     if (start_date) {
       projectData.start_date = start_date;
@@ -26,7 +26,7 @@ const validateCreateProject = (req, res, next) => {
 };
 
 const validatePutProject = async (req, res, next) => {
-  const { title, description, start_date, end_date, tags } = req.body;
+  const { title, description_project, start_date, end_date, tags } = req.body;
   const { id } = req.params;
   try {
     const [result] = await Project.findOneById(id);
@@ -35,8 +35,8 @@ const validatePutProject = async (req, res, next) => {
     if (title) {
       projectData.title = title;
     }
-    if (description) {
-      projectData.description = description;
+    if (description_project) {
+      projectData.description_project = description_project;
     }
     if (start_date) {
       projectData.start_date = start_date;
