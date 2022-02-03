@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function Home() {
-  return <div>acceuil Home</div>;
+    return <div>acceuil Home</div>;
 }
 
 export default Home;

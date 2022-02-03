@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function AboutUs() {
-  return <div>acceuil AboutUs</div>;
+    return <div>acceuil AboutUs</div>;
 }
 
 export default AboutUs;

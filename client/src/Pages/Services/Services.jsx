@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function Services() {
-  return <div>acceuil Services</div>;
+    return <div>acceuil Services</div>;
 }
 
 export default Services;
