@@ -1,4 +1,5 @@
 import React from 'react';
+import AdvertHome from '../../components/Home/ProjectHome/AdvertHome';
 import ProjectHome from '../../components/Home/ProjectHome/ProjectHome';
 import './Services.css';
 
@@ -66,6 +67,7 @@ function Services() {
                 START MY RENO
             </button>
             <ProjectHome />
+            <AdvertHome />
         </div>
     );
 }

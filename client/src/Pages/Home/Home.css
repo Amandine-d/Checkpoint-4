@@ -1,3 +1,8 @@
+:root {
+  --bg-dark-green: hsl(102,13%,38%);
+  --txt-clr-white: hsl(208, 100%, 97%);
+}
+
 .home__container {
   display: flex;
   flex-direction: column;
@@ -42,4 +47,30 @@ ProjectHome
 .text__project__home {
 
   width: 90vw;
+}
+
+/*
+==============
+AdvertHome
+==============
+*/
+.advert__home__container {
+  height: 40vh;
+  background-color: var(--bg-dark-green);
+  color: var(--txt-clr-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line__advert {
+  /* display: block; */
+  /* align-items: center;
+  justify-content: center; */
+  height: 0.em;
+  width: 3em;
+  margin: 0.5em;
+  margin-left: 40%;
+  background-color: black;
+
 }
