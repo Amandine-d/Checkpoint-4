@@ -5,9 +5,17 @@
   --link-hover: white;
   --span-menu: ()
 }
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 2000;
+}
 
 .main__logo {
   width:  50%;
+  position: relative;
+  z-index: 800;
+  top: 2em;
 }
 
 .burger__menu {
@@ -31,10 +39,6 @@
 }
 
 .burger__menu span:nth-child(1) {
-  /* height: 0.5em;
-  width: 3em; */
-  /* border-radius: var(--border-radius); */
-  /* background-color: var(--link);  */
   transition: 0.3s;
   transform-origin: top right;
 }
@@ -73,7 +77,6 @@
   flex-flow: column;
   list-style: none;
   background: var(--dark-menu);
-  /* border-radius: var(--border-radius); */
   position: absolute;
   top: 0;
   right: 0;

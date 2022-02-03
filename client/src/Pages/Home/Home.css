@@ -1,0 +1,12 @@
+.home__container {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(78,25%,80%);
+}
+
+.bg__home__header {
+  top: -4em;
+  left: 0;
+  width: 100%;
+  margin-bottom: 1em;
+}
