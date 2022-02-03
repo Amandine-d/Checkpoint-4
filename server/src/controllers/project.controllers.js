@@ -3,7 +3,7 @@ const { Project, Image } = require("../models");
 const findAll = async (req, res) => {
   try {
     const [projects] = await Project.findAll();
-    projects.forEach((project) => {
+    projects.map((project) => {
       project.images = [];
       return projects;
     });

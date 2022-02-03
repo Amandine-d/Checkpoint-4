@@ -5,6 +5,7 @@ CREATE TABLE image (
     `srcAfter` VARCHAR(255),
     `altAfter` VARCHAR(100),
     `description_img` TEXT,
+    `is_poster` INT,
     `location_project` VARCHAR(255),
     `author` VARCHAR(255),
     `project_id` INT,

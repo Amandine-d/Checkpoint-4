@@ -1,8 +1,8 @@
 const { Image } = require("../models");
 
 const validateCreateImage = (req, res, next) => {
-  const { srcBefore, altBefore, /* srcAfter, altAfter, */ description, author, location, project_id } = req.body;
-  if (srcBefore && altBefore && /* srcAfter && altAfter && */ description && author && location && project_id) {
+  const { srcBefore, altBefore, /* srcAfter, altAfter, */ description, author, location, project_id, is_poster } = req.body;
+  if (srcBefore && altBefore && /* srcAfter && altAfter && */ description && author && location && project_id && is_poster) {
     const imageData = {};
     if (srcBefore) {
       imageData.srcBefore = srcBefore;
@@ -28,6 +28,9 @@ const validateCreateImage = (req, res, next) => {
     if (project_id) {
       imageData.project_id = project_id;
     }
+    if (is_poster) {
+      imageData.is_poster = is_poster;
+    }
     req.imageData = imageData;
     return next();
   }
@@ -35,7 +38,7 @@ const validateCreateImage = (req, res, next) => {
 };
 
 const validatePutImage = async (req, res, next) => {
-  const { srcBefore, altBefore, /* srcAfter, altAfter, */ description, author, location, project_id } = req.body;
+  const { srcBefore, altBefore, /* srcAfter, altAfter, */ description, author, location, project_id, is_poster } = req.body;
   const { id } = req.params;
   try {
     const [result] = await Image.findOneById(id);
@@ -64,6 +67,9 @@ const validatePutImage = async (req, res, next) => {
     }
     if (project_id) {
       imageData.project_id = project_id;
+    }
+    if (is_poster) {
+      imageData.is_poster = is_poster;
     }
     req.imageData = imageData;
     return next();
