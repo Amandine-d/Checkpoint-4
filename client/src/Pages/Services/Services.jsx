@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectHome from '../../components/Home/ProjectHome/ProjectHome';
 import './Services.css';
 
 function Services() {
@@ -64,6 +65,7 @@ function Services() {
             <button className="renovation__button" type="button">
                 START MY RENO
             </button>
+            <ProjectHome />
         </div>
     );
 }

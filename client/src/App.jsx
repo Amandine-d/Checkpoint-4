@@ -20,7 +20,6 @@ function App() {
                             <Home /> <Services />{' '}
                         </>
                     }
-                    className="bg__olive"
                 />
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/contact" element={<Contact />} />
