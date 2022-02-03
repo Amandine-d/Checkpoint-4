@@ -20,6 +20,19 @@ const createOne = async (req, res, next) => {
   }
 };
 
+const findOneById = async (req, res) => {
+  const id = req.params.id ? req.params.id : req.id;
+  const statusCode = req.method === "POST" ? 201 : 200;
+  if (!id || !Number(id)) return res.status(400).json({ message: "Wrong ID" });
+  try {
+    const [results] = await Testimonial.findOneById(id);
+    if (results.length === 0) return res.status(404).send();
+    return res.status(statusCode).send(results);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+};
+
 const deleteOne = async (req, res) => {
   const { id } = req.params;
   try {
@@ -31,4 +44,4 @@ const deleteOne = async (req, res) => {
   }
 };
 
-module.exports = { findAll, createOne, deleteOne };
+module.exports = { findAll, createOne, deleteOne, findOneById };

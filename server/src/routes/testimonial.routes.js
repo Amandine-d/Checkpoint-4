@@ -1,10 +1,10 @@
 const testimonialRouter = require("express").Router();
-const { TestomonialController } = require("../controllers");
+const { TestimonialController } = require("../controllers");
 
-testimonialRouter.get("/", TestomonialController.findAll);
+testimonialRouter.get("/", TestimonialController.findAll);
 
-testimonialRouter.post("/", TestomonialController.createOne, TestomonialController.findOneById);
+testimonialRouter.post("/", TestimonialController.createOne, TestimonialController.findOneById);
 
-testimonialRouter.delete("/:id", TestomonialController.deleteOne);
+testimonialRouter.delete("/:id", TestimonialController.deleteOne);
 
 module.exports = testimonialRouter;

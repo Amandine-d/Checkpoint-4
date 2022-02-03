@@ -72,5 +72,23 @@ AdvertHome
   margin: 0.5em;
   margin-left: 40%;
   background-color: black;
-
 }
+
+/*
+==============
+Testimonials
+==============
+*/
+
+.testimonials__home {
+  margin: 2em;
+}
+
+.name__testimonial {
+  font-weight: bold;
+}
+
+.quote__testimonial {
+  padding-bottom: 1em;
+}
+

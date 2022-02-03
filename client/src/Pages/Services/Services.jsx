@@ -1,6 +1,7 @@
 import React from 'react';
 import AdvertHome from '../../components/Home/ProjectHome/AdvertHome';
 import ProjectHome from '../../components/Home/ProjectHome/ProjectHome';
+import Testimonials from '../../components/Home/Testimonials/Testimonials';
 import './Services.css';
 
 function Services() {
@@ -68,6 +69,7 @@ function Services() {
             </button>
             <ProjectHome />
             <AdvertHome />
+            <Testimonials />
         </div>
     );
 }
