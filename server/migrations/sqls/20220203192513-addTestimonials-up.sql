@@ -1,0 +1,5 @@
+INSERT INTO testimonial (firstname, quote)
+VALUES ("Dale G.", "I set the bar high for the quality of my own work, and Horizon Eco Builders meet or exceed that threshold for quality workmanship all the time."),
+("Ron C.", "We hired Horizon Eco Builders and couldn't be happier with the job they did for us.  I wouldn't hesitate to hire them again, or recommend them for any project you may have."),
+("Chor-Huy P.", "Horizon Eco-Builders are specialists in environmentally friendly construction projects. They are extremely punctual, meticulous, and leave no detail behind. We are really happy with the new look of our house!"),
+("Sarah H.", "We had a pleasure of having Horizon Eco Builders do some small work at our house. Simon and his team were really professional, did a great work and were reasonable. They are knowledgeable and pay attention to details. I highly recommend them for any size reno, repair, etc. you might have");

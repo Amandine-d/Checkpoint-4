@@ -1,0 +1,58 @@
+:root {
+    --border-color: 2px solid black;
+    --box-shadow: 10px 5px 5px hsl(146, 26%, 55%);
+    --clr: hsl(78, 25%, 80%);
+    --drk: hsl(101, 32%, 19%);
+    --border-radius: 10px;
+    --hover-dark: black;
+}
+
+.service__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(78, 25%, 80%);
+}
+
+.services {
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    border-color: var(--border-color);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1em;
+}
+
+.img__services {
+    margin: 0;
+}
+
+.title__services {
+    margin-top: 0;
+}
+
+.renovation__button {
+    background-color: var(--drk);
+    color: var(--clr);
+    border-radius: var(--border-radius);
+    padding: 1em;
+}
+
+.renovation__button:hover {
+    background-color: var(--hover-dark);
+    color: var(--clr);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 728px) {
+    .service__container {
+        display: grid;
+    }
+    .services {
+        columns: auto 3;
+    }
+}

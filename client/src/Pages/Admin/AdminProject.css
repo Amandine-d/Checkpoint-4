@@ -1,0 +1,36 @@
+:root {
+  --bg-dark-green: hsl(155, 51%, 42%);
+  --txt-clr-white: hsl(208, 100%, 97%);
+  --bg-clr-green:  hsl(78, 25%, 80%);
+  --hover-dark: black;
+}
+
+
+.container__testimonials {
+  padding-top: 20vh;
+  background-color: var(--bg-clr-green);
+}
+
+.form__testimonials {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__testimonial {
+  margin: 1em;
+  background-color: var(--bg-dark-green);
+  color: var(--txt-clr-white);
+}
+
+.btn__testimonial:hover {
+  background-color: var(--hover-dark);
+  color: var(--bg-clr-green);
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 728px) {
+  .container__testimonials {
+    padding-top: 30vh;
+  }
+}
