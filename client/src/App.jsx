@@ -3,10 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Services from './Pages/Services/Services';
 import AboutUs from './Pages/AboutUs/AboutUs';
-import Contact from './Pages/Contact/Contact';
 import Header from './Pages/Header/Header';
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Pages/Footer/Footer';
+// import AdminProjects from './Pages/Admin/AdminProjects';
+import AdminTestimonials from './Pages/Admin/AdminTestimonials';
+// import AdminValidation from './Pages/Admin/Adminvalidation';
 
 function App() {
     return (
@@ -22,11 +24,9 @@ function App() {
                     }
                 />
                 <Route path="/about" element={<AboutUs />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/admin" element={<AdminTestimonials />} />
             </Routes>
-            <footer className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </footer>
+            <Footer />
         </div>
     );
 }

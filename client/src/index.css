@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(78,25%,80%);
 }
 
 code {
@@ -18,4 +19,9 @@ code {
 
 .green__text{
   color: var(--green-text);
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }

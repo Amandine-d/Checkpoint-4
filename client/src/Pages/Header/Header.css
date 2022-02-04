@@ -3,7 +3,6 @@
   --border-radius: 1em;
   --link: hsl(120, 66%, 29%);
   --link-hover: white;
-  --span-menu: ()
 }
 .header {
   width: 100%;
@@ -19,12 +18,12 @@
 }
 
 .burger__menu {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   border-color: transparent;
   background-color: transparent;
-  right: 0;
-  top: 0;
+  right: 1em;
+  top: 1em;
 }
 
 .burger__menu > span {

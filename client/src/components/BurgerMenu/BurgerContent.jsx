@@ -25,20 +25,20 @@ function BurgerContent({ handleClick }) {
                 </li>
                 <li>
                     <NavLink
-                        to="/gallery"
+                        to="/about"
                         className="navlink__burger"
                         onClick={handleClick}
                     >
-                        Gallery{' '}
+                        About us{' '}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
-                        to="/contact"
+                        to="/admin"
                         className="navlink__burger"
                         onClick={handleClick}
                     >
-                        Contact us{' '}
+                        Admin{' '}
                     </NavLink>
                 </li>
             </ul>

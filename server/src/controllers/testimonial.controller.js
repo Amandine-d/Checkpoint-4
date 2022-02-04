@@ -10,9 +10,9 @@ const findAll = async (req, res) => {
 };
 
 const createOne = async (req, res, next) => {
-  const { firstname, lastname, quote } = req.body;
+  const { firstname, quote } = req.body;
   try {
-    const [results] = await Testimonial.createOne({ firstname, lastname, quote });
+    const [results] = await Testimonial.createOne({ firstname, quote });
     req.id = results.insertId;
     next();
   } catch (err) {

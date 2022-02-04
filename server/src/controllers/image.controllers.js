@@ -73,14 +73,14 @@ const updateOne = async (req, res, next) => {
 const uploadFile = (req, res, next) => {
   const storage = multer.diskStorage({
     destination: (_req, _file, cb) => {
-      cb(null, "public/pictures/club-events");
+      cb(null, "public/pictures");
     },
     filename: (_, file, cb) => {
       cb(null, `${Date.now()}-${file.originalname}`);
     },
   });
 
-  const upload = multer({ storage }).single("eventPictureFile");
+  const upload = multer({ storage }).single("projectPictureFile");
 
   upload(req, res, (err) => {
     if (err) {

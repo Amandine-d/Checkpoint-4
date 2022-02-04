@@ -28,21 +28,23 @@ function ProjectHome() {
                 {projects.map((project) => (
                     <>
                         <div className="text__project__home">
-                            <h1>{project.title}</h1>
-                            <h3>{project.description_project}</h3>
+                            <h1 className="h1__project">{project.title}</h1>
+                            <h3 className="text__project">
+                                {project.description_project}
+                            </h3>
                         </div>
 
-                        <div className="image__project__home">
-                            {project.images
-                                .filter((image) => image.is_poster === 1)
-                                .map((poster) => (
-                                    <img
-                                        className="poster__project__home"
-                                        src={`${process.env.REACT_APP_API_URL}/images/${poster.srcBefore}`}
-                                        alt={poster.altBefore}
-                                    />
-                                ))}
-                        </div>
+                        {/* <div className="image__project__home"> */}
+                        {project.images
+                            .filter((image) => image.is_poster === 1)
+                            .map((poster) => (
+                                <img
+                                    className="poster__project__home"
+                                    src={`${process.env.REACT_APP_API_URL}/images/${poster.srcBefore}`}
+                                    alt={poster.altBefore}
+                                />
+                            ))}
+                        {/* </div> */}
                     </>
                 ))}
             </div>

@@ -39,6 +39,7 @@ const createOne = async (req, res, next) => {
   try {
     const [result] = await Project.createOne(req.projectData);
     req.id = result.insertId;
+    console.log(req)
     return next();
   } catch (err) {
     return res.status(500).send(err.message);

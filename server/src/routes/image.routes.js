@@ -7,6 +7,7 @@ imageRouter.get("/", ImageController.findAll);
 imageRouter.get("/:id", ImageController.findOneById);
 
 imageRouter.post("/", validateCreateImage, ImageController.uploadFile, ImageController.createOne, ImageController.findOneById);
+imageRouter.post("/projects", validateCreateImage, ImageController.uploadFile, ImageController.createOne, ImageController.findOneById);
 
 // imageRouter.put("/:id", validatePutImage, ImageController.updateOne, ImageController.findOneById);
 
