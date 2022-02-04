@@ -174,10 +174,11 @@ const AdminTestimonials = () => {
                         </label>
                     </>
                 )}
+                <button type="submit" className="btn__testimonial">
+                    {submitButtonText}
+                </button>
             </form>
-            <button type="submit" className="btn__testimonial">
-                {submitButtonText}
-            </button>
+
             {testimonials.map((testimonial) => (
                 <>
                     {console.log(testimonial)}
